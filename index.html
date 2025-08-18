@@ -1,0 +1,37 @@
+<!DOCTYPE html5>
+<html>
+    <head>
+        <link rel="stylesheet" href="game.css">
+        <title>Sasso Carta Forbici</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="giocata_" id="computer">
+                <img src="sasso.png" class="sasso" alt="">
+                <img src="carta.png" class="carta" alt="">
+                <img src="forbici.png" class="forbici" alt="">
+            </div>
+            <!--  -->
+            <input type="text" id="risultato" disabled>
+            <!--  -->
+            <div class="giocata_" id="giocatore">
+                <img src="sasso.png" class="sasso" alt="">
+                <img src="carta.png" class="carta" alt="">
+                <img src="forbici.png" class="forbici" alt="">
+            </div>
+            <div class="btn_box">
+                <div class="box_btn_gioco">
+                    <button class="btn_gioco btn_scelta" id="btn_sasso" value="1">SASSO</button>
+                    <button class="btn_gioco btn_scelta" id="btn_carta" value="2">CARTA</button>
+                    <button class="btn_gioco btn_scelta" id="btn_forbici" value="3">FORBICI</button>
+                </div>
+                <div class="box_btn_avvio">
+                    <button class="btn_gioco" id="btn_avvio" data-value="0">AVVIO</button>
+                </div>
+            </div>
+
+
+        </div>
+        <script src="game.js"></script>
+    </body>
+</html>

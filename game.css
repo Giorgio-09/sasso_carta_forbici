@@ -1,0 +1,85 @@
+*{
+    background-color: rgb(65, 65, 65);
+}
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#computer,
+#giocatore{
+    border: rgb(197, 183, 175) solid;
+
+    height: 300px;
+    width: 300px;
+}
+#risultato{
+    width: 20%;
+    height: 5%;
+    min-width: 300px;
+    background-color: rgb(197, 183, 175);
+    border-radius: 15px;
+    font-size: x-large;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    border: none;
+    text-align: center;
+}
+.btn_box{
+    border: rgba(197, 183, 175, 0.196) solid;
+    box-shadow: inset rgba(197, 183, 175, 0.196) 0px 0px 20px 0px;
+    z-index: 1;
+    border-radius: 10px;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box_btn_gioco,
+.box_btn_avvio{
+    width: 95%;
+    height: 45%;
+    min-width: 600px;
+    z-index: 0;
+    border: transparent;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.btn_gioco{
+    width: 20%;
+    height: 80%;
+    background-color: rgb(197, 183, 175);
+    border-radius: 15px;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    border: none;
+
+}
+.btn_gioco:active{
+    scale: 0.99;
+}
+
+/* ?regole immagine output */
+.sasso,
+.carta,
+.forbici{
+    display: none;
+}
+.giocata_1 > .sasso,
+.giocata_2 > .carta,
+.giocata_3 > .forbici{
+    display: block;
+}
