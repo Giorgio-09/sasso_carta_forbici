@@ -6,7 +6,7 @@ let display_computer = document.getElementById('computer');
 let display_giocatore = document.getElementById('giocatore');
 
 let sceltaGiocatore = null; 
-
+ 
 // Scelta del giocatore
 btn_scelta.forEach(button => {
   button.addEventListener('click', () => {
