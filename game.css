@@ -103,8 +103,8 @@ body, html {
 /* Media queries per tablet e smartphone */
 @media (max-width: 768px) {
     #computer, #giocatore {
-        width: 35vw;
-        height: 35vw;
+        width: 400px;
+        height: 400px;
     }
     #risultato {
         width: 80%;
