@@ -1,85 +1,125 @@
-*{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background-color: rgb(65, 65, 65);
 }
-.main{
+
+body, html {
     width: 100%;
     height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    padding: 10px;
 }
 
 #computer,
-#giocatore{
+#giocatore {
     border: rgb(197, 183, 175) solid;
-
-    height: 300px;
-    width: 300px;
+    height: 25vw;  /* Altezza proporzionale alla larghezza dello schermo */
+    width: 25vw;
+    max-width: 300px;
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#risultato{
-    width: 20%;
-    height: 5%;
-    min-width: 300px;
+
+#risultato {
+    width: 60%;
+    max-width: 300px;
+    height: 50px;
     background-color: rgb(197, 183, 175);
     border-radius: 15px;
     font-size: x-large;
     color: black;
-    font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
     border: none;
     text-align: center;
+    margin: 10px 0;
 }
-.btn_box{
+
+.btn_box {
     border: rgba(197, 183, 175, 0.196) solid;
     box-shadow: inset rgba(197, 183, 175, 0.196) 0px 0px 20px 0px;
     z-index: 1;
     border-radius: 10px;
     width: 100%;
-    height: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 10px 0;
 }
 
 .box_btn_gioco,
-.box_btn_avvio{
-    width: 95%;
-    height: 45%;
-    min-width: 600px;
-    z-index: 0;
-    border: transparent;
-    background-color: transparent;
+.box_btn_avvio {
+    width: 90%;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
+    flex-wrap: wrap; /* Permette di andare a capo su schermi piccoli */
+    gap: 10px;
+    justify-content: center;
+    margin: 5px 0;
 }
 
-.btn_gioco{
-    width: 20%;
-    height: 80%;
+.btn_gioco {
+    flex: 1 1 30%; /* Si adatta automaticamente alla larghezza disponibile */
+    max-width: 150px;
+    height: 50px;
     background-color: rgb(197, 183, 175);
     border-radius: 15px;
-    font-size: large;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
     font-weight: bolder;
     border: none;
-
 }
-.btn_gioco:active{
+
+.btn_gioco:active {
     scale: 0.99;
 }
 
-/* ?regole immagine output */
+/* Immagini delle scelte */
 .sasso,
 .carta,
-.forbici{
+.forbici {
     display: none;
+    max-width: 80%;
+    max-height: 80%;
 }
+
 .giocata_1 > .sasso,
 .giocata_2 > .carta,
-.giocata_3 > .forbici{
+.giocata_3 > .forbici {
     display: block;
+}
+
+/* Media queries per tablet e smartphone */
+@media (max-width: 768px) {
+    #computer, #giocatore {
+        width: 35vw;
+        height: 35vw;
+    }
+    #risultato {
+        width: 80%;
+        font-size: large;
+    }
+}
+
+@media (max-width: 480px) {
+    #computer, #giocatore {
+        width: 45vw;
+        height: 45vw;
+    }
+    .btn_gioco {
+        flex: 1 1 45%;
+        font-size: small;
+        height: 40px;
+    }
 }
