@@ -24,10 +24,8 @@ body, html {
 #computer,
 #giocatore {
     border: rgb(197, 183, 175) solid;
-    height: 25vw;  /* Altezza proporzionale alla larghezza dello schermo */
-    width: 25vw;
-    max-width: 300px;
-    max-height: 300px;
+    min-width: 350px;
+    min-height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,6 +56,8 @@ body, html {
     align-items: center;
     justify-content: center;
     padding: 10px 0;
+    position: relative;
+    bottom: 0px;
 }
 
 .box_btn_gioco,
@@ -103,8 +103,8 @@ body, html {
 /* Media queries per tablet e smartphone */
 @media (max-width: 768px) {
     #computer, #giocatore {
-        width: 400px;
-        height: 400px;
+        min-width: 350px;
+        min-height: 350px;
     }
     #risultato {
         width: 80%;
@@ -114,8 +114,8 @@ body, html {
 
 @media (max-width: 480px) {
     #computer, #giocatore {
-        width: 45vw;
-        height: 45vw;
+        min-width: 350px;
+        min-height: 350px;
     }
     .btn_gioco {
         flex: 1 1 45%;
